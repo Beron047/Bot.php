@@ -1,4 +1,3 @@
-<?php
 function server(){
   $r =  str_repeat("\033[1;95m~", 53)."\n";
   pil:
