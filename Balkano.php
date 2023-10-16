@@ -200,7 +200,9 @@ ban();
 goto a;
   b:
   $res=get("https://balkanofaucet.net/login",head());
-  echo "$res\n";
+  $cap = recapt($apikey,"6LewU34UAAAAAHvXqFOcQlm8z1MP1xpGAZCYEeZY","https://balkanofaucet/");
+    if(preg_match('/Request Timeout/',$cap)){sleep(20);}
+ $res=get("https://balkanofaucet.net/login",head());               
 $token=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
   $data="email=$email&password=$pass&captcha=recaptchav2&g-recaptcha-response=&csrf_token_name=$token";
   $res=post("https://balkanofaucet.net/auth/login",$data,head());
