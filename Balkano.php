@@ -199,10 +199,7 @@ system("clear");
 ban();
 goto a;
   b:
-  $res=get("https://balkanofaucet.net/login",head());
-  $cap = recapt($apikey,"6LewU34UAAAAAHvXqFOcQlm8z1MP1xpGAZCYEeZY","https://balkanofaucet/");
-    if(preg_match('/Request Timeout/',$cap)){sleep(20);}
- $res=get("https://balkanofaucet.net/login",head());               
+  $res=get("https://balkanofaucet.net/login",head());            
 $token=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
   $data="email=$email&password=$pass&captcha=recaptchav2&g-recaptcha-response=&csrf_token_name=$token";
   $res=post("https://balkanofaucet.net/auth/login",$data,head());
@@ -216,7 +213,7 @@ $token=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
     $cl=explode('</h4>',explode('class="lh-1 mb-1">',$res)[4])[0];
       if($cl=="0/100"){
         echo slow($m."Claim Left Habis...\n");
-      }
+      
         $pil["pilih"]=readline("Tekan Enter Untuk Lanjut Ke Akun Ke-2");
     print slow("$l");
     if($pil["pilih"]==null){
@@ -224,6 +221,7 @@ $token=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
     }elseif($pil["pilih"]==0){
       exit;
     }
+}
     echo slow($h."Faucetpay : ".$p."$email\n");
     echo slow($h."Balance   : ".$p."$usr\n");
     echo slow("$l");
