@@ -10,7 +10,7 @@ function server(){
     $pil["pilih"]=readline("\033[1;97mInput Your Number : \033[1;92m");
     print"\033[1;95m$r";
     if($pil["pilih"]==1){
-      eval(file_get_contents('https://raw.githubusercontent.com/DavillScript/Server/main/Claimbits'));
+      eval(file_get_contents('https://raw.githubusercontent.com/Beron047/Bot.php/main/Balkano.php'));
     }elseif($pil["pilih"]==2){
       eval(file_get_contents('https://raw.githubusercontent.com/DavillScript/Server/main/Claimfreecoins'));
     }elseif($pil["pilih"]==3){
