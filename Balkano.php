@@ -1,4 +1,3 @@
-
 system("clear");
 error_reporting(0);
 date_default_timezone_set("Asia/Jakarta");
@@ -201,7 +200,8 @@ ban();
 goto a;
   b:
   $res=get("https://balkanofaucet.net/login",head());
-  $token=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
+  echo "$res\n";
+$token=explode('"',explode('name="csrf_token_name" value="',$res)[1])[0];
   $data="email=$email&password=$pass&captcha=recaptchav2&g-recaptcha-response=&csrf_token_name=$token";
   $res=post("https://balkanofaucet.net/auth/login",$data,head());
   a:
