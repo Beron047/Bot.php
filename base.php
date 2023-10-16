@@ -2,7 +2,7 @@
 function server(){
   $r =  str_repeat("\033[1;95m~", 53)."\n";
   pil:
-    print "\033[1;92m1. Claimbits      => https://tutwuri.id/HdikAH5\n";
+    print "\033[1;92m1. Claimbits      => \n";
     print "\033[1;92m2. Claimfreecoins => https://tutwuri.id/zuLacYmL\n";
     print "\033[1;92m3. Faucetpk       => https://tutwuri.id/1yNECie\n";
     print "\033[1;92m4. Balkanofaucet  => https://tutwuri.id/k7nDp\n";
