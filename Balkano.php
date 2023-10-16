@@ -132,7 +132,7 @@ $p="\033[1;97m";
       }
       return $data;
     }
-function recaptchav2($apikey, $sitekey, $pageurl){
+function recapt($apikey, $sitekey, $pageurl){
  $ua = ["host: goodxevilpay.pp.ua","content-type: application/json/x-www-form-urlencoded"];
  while(true){
   $r1 = get("http://goodxevilpay.pp.ua/in.php?key=$apikey&method=userrecaptcha&googlekey=$sitekey&pageurl=$pageurl",$ua);
